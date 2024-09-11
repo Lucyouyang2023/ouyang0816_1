@@ -1,26 +1,26 @@
-# version: 0.2
-# phases:
-#   build:
-#     commands:
-#       - aws deploy push --application-name cicd-codedeploy --s3-location s3://mybaket-artifact/artifact.zip --source src
-# artifacts:
-#   files:
-#     - '**/*'
-#   base-directory: src
-
-
 version: 0.2
-
 phases:
   build:
     commands:
-      - echo Build started on `date`
-      - echo Copying files...
-      - cp src/R.jpg /var/www/htm
       - aws deploy push --application-name cicd-codedeploy --s3-location s3://mybaket-artifact/artifact.zip --source src
-
 artifacts:
   files:
     - '**/*'
   base-directory: src
+
+
+# version: 0.2
+
+# phases:
+#   build:
+#     commands:
+#       - echo Build started on `date`
+#       - echo Copying files...
+#       - cp src/R.jpg /var/www/htm
+#       - aws deploy push --application-name cicd-codedeploy --s3-location s3://mybaket-artifact/artifact.zip --source src
+
+# artifacts:
+#   files:
+#     - '**/*'
+#   base-directory: src
 

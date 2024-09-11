@@ -1,5 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: src/*
+  - source: index.html
+    destination: /var/www/html/
+
+
+  - source: R.jpg
     destination: /var/www/html/
